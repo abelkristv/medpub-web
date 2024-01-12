@@ -1,0 +1,462 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Aquire';
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Aquire';
+  src: url('./assets/Aquire-BW0ox.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Aquire';
+  src: url('./assets/AquireBold-8Ma60.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  src: url('./assets/fonts/Poppins/Poppins-Medium.ttf');
+  font-family: 'Poppins';
+  font-weight: normal;
+}
+
+
+nav {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.0);
+  position: fixed;
+}
+
+nav > a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  height: 1100px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 1000px;
+}
+
+.layer1 {
+  position: absolute;
+  bottom: -500px;
+  left: 0px;
+  z-index: 3;
+}
+
+.hard-skill {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slide {
+  border-radius: 100%;
+  background-color: rgba(240, 248, 255, 0.635);
+  padding: 30px;
+  width: 100px;
+  height: 100px;
+  /* height: 500px; */
+}
+
+.hard-skill-logo {
+  width: 100%;
+  /* display: flex; */
+  animation: 15s slide infinite linear;
+  display: inline-block;
+}
+
+.slide {
+  display: inline-block;
+}
+
+.soft-skill-logo {
+  width: 100%;
+  /* display: flex; */
+  animation: 15s slide infinite linear;
+  display: inline-block;
+}
+
+.others-logo {
+  width: 100%;
+  /* display: flex; */
+  animation: 15s slide infinite linear;
+  display: inline-block;
+}
+
+/* .req-layer1 {
+  position: absolute;
+  top: -800px;
+  left: 0px;
+  width: 100%;
+} */
+
+.layer4 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 2;
+}
+
+.layer5 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 0;
+}
+
+.layer3 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  z-index: 4;
+}
+
+.layer2 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero > .logo {
+  animation: pulse 2s infinite;
+  border-radius: 100%;
+  z-index: 10;
+}
+
+.hero > h1 {
+  margin-top: 20px;
+  color: white;
+  font-size: 60px;
+  z-index: 10;
+}
+
+nav {
+  padding: 30px;
+  z-index: 10;
+}
+
+nav > h1 {
+  color: white;
+  font-size: 40px;
+}
+
+.buffer {
+  height: 200px;
+  background: linear-gradient(#000000, #00062b);
+
+}
+
+.blurry-bottom {
+  position: relative;
+  overflow: hidden;
+}
+
+.blurry-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Adjust the height to control the area of the blur effect */
+
+  z-index: 10;
+}
+
+.blurry-top {
+  position: relative;
+  /* Your div styling goes here */
+  /* Example */
+  /* width: 300px;
+  height: 200px; */
+  overflow: hidden;
+}
+
+.blurry-top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px; 
+  background-color: linear-gradient(#00002b, #000000);
+}
+
+.benefit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  background-color: rgb(227, 253, 216);
+}
+
+.logo-section  h2 {
+  margin-left: 40px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.benefit > h1 {
+  color: rgb(95, 159, 95);
+  font-size: 60px;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  padding-top: 200px;
+  padding-bottom: 150px;
+  flex-direction: column;
+  background-image: url('./assets/aurora.png');
+  background-size: cover;
+  background-color: rgba(0,0,0,0.5);
+  height: auto;
+  position: sticky;
+  scroll-snap-align: start;
+  z-index: 2;
+}
+
+.section * {
+  z-index: 2;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.bg-fix {
+  background-attachment: fixed;
+}
+
+.requirement-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  scroll-snap-type: y mandatory;
+}
+
+.regist {
+  width: 60%;
+  background-color: rgba(240, 248, 255, 0.782);
+  /* opacity: 80%; */
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  box-shadow: 0 0 10px 1px black;
+}
+
+.regist * {
+  font-family: 'Poppins';
+}
+
+.initial-test {
+  height: 500px;
+}
+
+.consist-of {
+  background-color: rgb(227, 253, 216);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.consist-of > h1 {
+  text-align: center;
+}
+
+.reminder{
+  background-color: rgb(227, 253, 216);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.reminder > h1 {
+  text-align: center;
+}
+
+.contacts {
+  height: 500px;
+}
+
+.contact-us {
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us-items {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sosmed {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sosmed-item {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.sosmed-item:hover {
+  background-color: rgba(240, 248, 255, 0.679);
+}
+
+.sosmed-item > img {
+  width: 50px;
+}
+
+.sosmed-item > a {
+  text-align: center;
+  width: 100%;
+}
+
+.email {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}
+
+.initial-test-second-half {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.registration-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.register-btn {
+  padding: 20px;
+  background-color: rgb(95, 159, 95);
+  color: white;
+  border: 0px;
+  border-radius: 20px;
+  width: 200px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  width: 45%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0px black;
+  align-items: center;
+  margin-top: 40px;
+  border: 1px solid black;
+  background-color: rgba(240, 248, 255, 0.697);
+}
+
+.item > img {
+  margin-right: 30px;
+}
+
+.item h2 {
+  font-family: 'Poppins';
+}
+
+.item li {
+  font-family: 'Poppins';
+}
+
+.star {
+	position: fixed;
+	pointer-events: none;
+  z-index: 100;
+}
+
+.star:before, .star:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '\2726';
+	font-size: 9px;
+}
+
+.star:before {
+	color: transparent;
+	text-shadow: 0 0 3px rgb(250, 250, 174);
+}
+
+.star:after {
+	background: rgb(194, 255, 194);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@keyframes pulse {
+  0% {
+		box-shadow: 0 0 0px 0 rgba(179,255,179, 0.7);
+	}
+
+	60% {
+		box-shadow: 0 0 90px 10px rgba(179, 255, 179, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0px 0 rgba(179, 255, 179, 0);
+	}
+}
+
+@keyframes slide {
+  from {
+    transform: translate(0);
+  } 
+  to {
+    transform: translate(-100%);
+  }
+}
