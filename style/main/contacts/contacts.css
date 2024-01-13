@@ -1,6 +1,10 @@
 .contacts {
     height: 500px;
 }
+
+#contacts {
+    padding-bottom: 300px;
+}
   
 .contact-us {
     justify-content: center;
