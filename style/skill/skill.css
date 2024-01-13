@@ -1,0 +1,32 @@
+.skill {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slide {
+    border-radius: 100%;
+    background-color: rgba(240, 248, 255, 0.635);
+    padding: 30px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+  
+.hard-skill-logo {
+    width: 100%;
+    animation: 15s slide infinite linear;
+    display: inline-block;
+}
+  
+.soft-skill-logo {
+    width: 100%;
+    animation: 15s slide-forward infinite linear;
+    display: inline-block;
+}
+  
+.others-logo {
+    width: 100%;
+    animation: 15s slide infinite linear;
+    display: inline-block;
+}

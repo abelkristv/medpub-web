@@ -1,0 +1,64 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 1000px;
+    scroll-snap-align: start;
+}
+
+.hero > .logo {
+    animation: pulse 2s infinite;
+    border-radius: 100%;
+    z-index: 10;
+}
+  
+.hero > h1 {
+    margin-top: 20px;
+    color: white;
+    font-size: 60px;
+    z-index: 10;
+}
+  
+.first-layer {
+    position: absolute;
+    bottom: -500px;
+    left: 0px;
+    z-index: 3;
+}
+
+.second-layer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+.third-layer {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    z-index: 4;
+}
+
+.fourth-layer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 2;
+}
+  
+.fifth-layer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 0;
+}
+  
+  
+  
+  

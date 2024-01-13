@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: 'Aquire';
+    src: url('../assets/Aquire-BW0ox.otf');
+    font-weight: normal;
+  }
+  
+@font-face {
+    font-family: 'Aquire';
+    src: url('../assets/AquireBold-8Ma60.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    src: url('../assets/fonts/Poppins/Poppins-Medium.ttf');
+    font-family: 'Poppins';
+    font-weight: normal;
+}

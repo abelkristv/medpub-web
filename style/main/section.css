@@ -1,0 +1,43 @@
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    flex-direction: column;
+    background-image: url('../assets/aurora.png');
+    background-size: cover;
+    background-color: rgba(0,0,0,0.5);
+    background-attachment: fixed;
+    height: auto;
+    position: sticky;
+    scroll-snap-align: start;
+    z-index: 2;
+}
+  
+.section * {
+    z-index: 2;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.logo-section  h2 {
+    margin-left: 40px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.logo-section {
+    padding: 0px; 
+    padding-top: 300px;
+}

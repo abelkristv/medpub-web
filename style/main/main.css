@@ -1,0 +1,7 @@
+@import url("./hero.css");
+
+main {
+    height: 1100px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}

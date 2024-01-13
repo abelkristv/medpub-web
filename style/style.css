@@ -1,0 +1,63 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Aquire';
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.initial-test {
+  height: 500px;
+}
+
+.consist-of {
+  background-color: rgb(227, 253, 216);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.consist-of > h1 {
+  text-align: center;
+}
+
+.reminder{
+  background-color: rgb(227, 253, 216);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.reminder > h1 {
+  text-align: center;
+}
+
+.email {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+}
+
+.initial-test-second-half {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.register-btn {
+  padding: 20px;
+  background-color: rgb(95, 159, 95);
+  color: white;
+  border: 0px;
+  border-radius: 20px;
+  width: 200px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}

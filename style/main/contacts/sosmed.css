@@ -1,0 +1,27 @@
+.sosmed {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.sosmed-item {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+  
+.sosmed-item:hover {
+    background-color: rgba(240, 248, 255, 0.679);
+}
+  
+.sosmed-item > img {
+    width: 50px;
+}
+  
+.sosmed-item > a {
+    text-align: center;
+    width: 100%;
+}

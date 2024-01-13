@@ -1,0 +1,15 @@
+.box {
+    width: 60%;
+    background-color: rgba(240, 248, 255, 0.782);
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    box-shadow: 0 0 10px 1px black;
+}
+  
+.box * {
+    font-family: 'Poppins';
+}
