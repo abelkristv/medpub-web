@@ -45,7 +45,7 @@ function applyParallaxEffect(event) {
 }
 
 function checkNavbarReachBenefit() {
-  window.addEventListener('mousemove', function() {
+  document.getElementById('main').addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
     const benefits = document.getElementById('benefit');
     const benefitsTop = benefits.getBoundingClientRect().top;
@@ -85,4 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 createMouseTrail();
 initializeParallaxEffect();
-checkNavbarReachBenefit();
+document.addEventListener('DOMContentLoaded', function() {
+  checkNavbarReachBenefit();
+});
