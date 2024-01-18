@@ -1,19 +1,26 @@
-@keyframes slide {
+/* @keyframes slide {
     from {
       transform: translate(0);
     } 
     to {
       transform: translate(-100%);
     }
+} */
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-150px * 15))}
 }
 
+@keyframes slide-others {
+  0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-150px * 5))}
+}
+
+
 @keyframes slide-forward {
-    from {
-      transform: translate(0);
-    } 
-    to {
-      transform: translate(100%);
-    }
+  0% { transform: translateX(calc(-150px * 7)); }
+	100% { transform: translateX(calc(150px * -1)); }
 }
 
 @keyframes pulse {

@@ -8,25 +8,82 @@
     border-radius: 100%;
     background-color: rgba(240, 248, 255, 0.635);
     padding: 30px;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.slide:hover {
+    transform: scale(1.5);
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 50px;
+    margin-right: 70px;
+    transition: all 700ms;
+}
+
+.slide img {
+    width: 70px;
+    height: 70px;
+}
+
+#php {
+    width: 70px;
+    height: 50px;
+}
+
+#css {
+    width: 50px;
+}
+
+#sqlite {
+    height: 60px;
+}
+
+.logo-wrapper::after {
+    right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+    width: auto;
 }
   
 .hard-skill-logo {
-    width: 100%;
-    animation: 15s slide infinite linear;
-    display: inline-block;
+    animation: 28.5s slide infinite linear;
+    display: flex;
+    width: calc(150px * 30);
 }
   
 .soft-skill-logo {
-    width: 100%;
-    animation: 15s slide-forward infinite linear;
-    display: inline-block;
+    width: calc(150px * 18);
+    animation: 17.5s slide-forward infinite linear;
+    display: flex;
 }
-  
+
 .others-logo {
-    width: 100%;
-    animation: 15s slide infinite linear;
-    display: inline-block;
+    width: calc(150px * 20);
+    animation: 15s slide-others infinite linear;
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.slide-description {
+    display: none;
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(240, 248, 255, 0.719);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.slide:hover .slide-description {
+    display: block;
 }

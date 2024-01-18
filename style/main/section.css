@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     padding: 50px;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 150px;
     flex-direction: column;
     background-image: url('../assets/aurora.png');
@@ -13,8 +13,14 @@
     height: auto;
     position: sticky;
     scroll-snap-align: start;
+    scroll-behavior: smooth;
     z-index: 2;
 }
+@media only screen and (max-width: 1366px) {
+    .section {
+        padding-top: 50px;
+    }
+  }
   
 .section * {
     z-index: 2;
@@ -39,5 +45,5 @@
 
 .logo-section {
     padding: 0px; 
-    padding-top: 300px;
+    padding-top: 100px;
 }

@@ -8,6 +8,7 @@
 .item {
     display: flex;
     width: 45%;
+    height: 200px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px 0px black;

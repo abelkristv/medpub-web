@@ -45,11 +45,13 @@ function applyParallaxEffect(event) {
 }
 
 function checkNavbarReachBenefit() {
-  document.addEventListener('scroll', function() {
+  window.addEventListener('mousemove', function() {
     const navbar = document.getElementById('navbar');
     const benefits = document.getElementById('benefit');
     const benefitsTop = benefits.getBoundingClientRect().top;
     const navbarHeight = navbar.offsetHeight;
+
+    console.log(benefitsTop);
 
     if (benefitsTop - navbarHeight <= 0) {
         navbar.classList.add('black-background');
@@ -58,20 +60,29 @@ function checkNavbarReachBenefit() {
     }
 });};
 
-let whereAmi="";
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.soft-skill-logo .slide').forEach(slide => {
+      slide.addEventListener('mouseover', () => {
+          document.querySelector('.soft-skill-logo').style.animationPlayState = 'paused';
+      });
 
-function sectionScrolling() {
-  document.addEventListener('scroll', function() {
-    const requirements = document.getElementById('requirements');
-    if (requirements.getBoundingClientRect().top <= window.innerHeight / 2 && requirements.getBoundingClientRect().bottom >= window.innerHeight / 2 && whereAmi!="requirements") {
-      requirements.scrollIntoView()
-      whereAmi="requirements"
-    }
-    whereAmi=""
-  })
-}
+      slide.addEventListener('mouseout', () => {
+          document.querySelector('.soft-skill-logo').style.animationPlayState = 'running';
+      });
+  });
+
+  document.querySelectorAll('.others-logo .slide').forEach(slide => {
+    slide.addEventListener('mouseover', () => {
+        document.querySelector('.others-logo').style.animationPlayState = 'paused';
+    });
+
+    slide.addEventListener('mouseout', () => {
+        document.querySelector('.others-logo').style.animationPlayState = 'running';
+    });
+});
+});
+
 
 createMouseTrail();
 initializeParallaxEffect();
 checkNavbarReachBenefit();
-// sectionScrolling();

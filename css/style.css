@@ -110,6 +110,7 @@ nav > h1 {
     align-items: center;
     flex-direction: column;
     height: 1000px;
+    scroll-behavior: smooth;
     scroll-snap-align: start;
 }
 
@@ -170,16 +171,17 @@ nav > h1 {
   
 
 main {
-    height: 1100px;
+    height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 .section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 150px;
     flex-direction: column;
     background-image: url('../assets/aurora.png');
@@ -189,8 +191,14 @@ main {
     height: auto;
     position: sticky;
     scroll-snap-align: start;
+    scroll-behavior: smooth;
     z-index: 2;
 }
+@media only screen and (max-width: 1366px) {
+    .section {
+        padding-top: 50px;
+    }
+  }
   
 .section * {
     z-index: 2;
@@ -215,7 +223,7 @@ main {
 
 .logo-section {
     padding: 0px; 
-    padding-top: 300px;
+    padding-top: 100px;
 }
 .requirement-items {
     display: flex;
@@ -227,6 +235,7 @@ main {
 .item {
     display: flex;
     width: 45%;
+    height: 200px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px 0px black;
@@ -263,30 +272,37 @@ main {
 .sosmed-item {
     display: flex;
     align-items: center;
-    width: 40%;
+    width: 100%;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 20px;
+    height: 50px;
 }
   
-.sosmed-item:hover {
+.sosmed-anchor:hover {
     background-color: rgba(240, 248, 255, 0.679);
+    border-radius: 20px;
 }
   
 .sosmed-item > img {
     width: 50px;
 }
   
-.sosmed-item > a {
+.sosmed-item p {
     text-align: center;
     width: 100%;
+}
+
+a.sosmed-anchor {
+    width: 50%;
+    height: 70px;
 }
 .contacts {
     height: 500px;
 }
 
 #contacts {
-    padding-bottom: 300px;
+    /* padding-bottom: 300px; */
 }
   
 .contact-us {
@@ -305,7 +321,7 @@ main {
     flex-direction: column;
 }
 #benefit {
-    padding-bottom: 300px;
+    padding-bottom: 50px;
 }
 .blurry-bottom {
     position: relative;
@@ -351,44 +367,109 @@ main {
     border-radius: 100%;
     background-color: rgba(240, 248, 255, 0.635);
     padding: 30px;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.slide:hover {
+    transform: scale(1.5);
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 50px;
+    margin-right: 70px;
+    transition: all 700ms;
+}
+
+.slide img {
+    width: 70px;
+    height: 70px;
+}
+
+#php {
+    width: 70px;
+    height: 50px;
+}
+
+#css {
+    width: 50px;
+}
+
+#sqlite {
+    height: 60px;
+}
+
+.logo-wrapper::after {
+    right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+    width: auto;
 }
   
 .hard-skill-logo {
-    width: 100%;
-    animation: 15s slide infinite linear;
-    display: inline-block;
+    animation: 28.5s slide infinite linear;
+    display: flex;
+    width: calc(150px * 30);
 }
   
 .soft-skill-logo {
-    width: 100%;
-    animation: 15s slide-forward infinite linear;
-    display: inline-block;
+    width: calc(150px * 18);
+    animation: 17.5s slide-forward infinite linear;
+    display: flex;
 }
-  
+
 .others-logo {
-    width: 100%;
-    animation: 15s slide infinite linear;
-    display: inline-block;
+    width: calc(150px * 20);
+    animation: 15s slide-others infinite linear;
+    display: flex;
+    padding-bottom: 100px;
 }
-@keyframes slide {
+
+.slide-description {
+    display: none;
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(240, 248, 255, 0.719);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.slide:hover .slide-description {
+    display: block;
+}
+
+/* @keyframes slide {
     from {
       transform: translate(0);
     } 
     to {
       transform: translate(-100%);
     }
+} */
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-150px * 15))}
 }
 
+@keyframes slide-others {
+  0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-150px * 5))}
+}
+
+
 @keyframes slide-forward {
-    from {
-      transform: translate(0);
-    } 
-    to {
-      transform: translate(100%);
-    }
+  0% { transform: translateX(calc(-150px * 7)); }
+	100% { transform: translateX(calc(150px * -1)); }
 }
 
 @keyframes pulse {
