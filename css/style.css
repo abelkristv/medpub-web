@@ -78,8 +78,9 @@ nav {
 
 nav > a {
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 30px;
     color: white;
+    font-size: 24px;
 }
   
 nav > h1 {

@@ -95,6 +95,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 createMouseTrail();
 initializeParallaxEffect();
+
+window.onload = function() {
+  // Check if the page is reloaded
+  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+    console.log("Page is reloaded, redirecting to root...");
+    window.location.href = '/';
+  } else {
+    console.log("Page loaded normally.");
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   checkNavbarReachBenefit();
+});
+
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+});
+
+// Additional script to disable certain keyboard shortcuts
+document.addEventListener('keydown', function(event) {
+  // Disable F12 key
+  if (event.keyCode === 123) {
+    event.preventDefault();
+  }
+
+  // Disable Ctrl+Shift+I combination
+  if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+    event.preventDefault();
+  }
+
+  // Disable Ctrl+Shift+J combination
+  if (event.ctrlKey && event.shiftKey && event.keyCode === 74) {
+    event.preventDefault();
+  }
+
+  // Disable Ctrl+U combination
+  if (event.ctrlKey && event.keyCode === 85) {
+    event.preventDefault();
+  }
 });
