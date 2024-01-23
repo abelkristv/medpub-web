@@ -61,6 +61,16 @@ function checkNavbarReachBenefit() {
 });};
 
 document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.hard-skill-logo .slide').forEach(slide => {
+    slide.addEventListener('mouseover', () => {
+        document.querySelector('.hard-skill-logo').style.animationPlayState = 'paused';
+    });
+
+    slide.addEventListener('mouseout', () => {
+        document.querySelector('.hard-skill-logo').style.animationPlayState = 'running';
+    });
+  });
+
   document.querySelectorAll('.soft-skill-logo .slide').forEach(slide => {
       slide.addEventListener('mouseover', () => {
           document.querySelector('.soft-skill-logo').style.animationPlayState = 'paused';
